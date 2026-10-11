@@ -4,6 +4,12 @@ An AI-powered, event-driven application built with AWS serverless services. User
 
 > **Project status:** Built as a hands-on AWS, Python, and Generative AI portfolio project. Verify each feature in your deployed environment before describing it as fully operational.
 
+ # Problem Statement
+ Reviewing resumes manually can be time-consuming for recruiters, especially when they receive a large number of applications. Identifying relevant skills, experience, and qualifications in each resume requires significant effort.
+
+This project aims to simplify the initial resume-screening process by building a serverless application on AWS that accepts PDF resumes, extracts their text, and is designed to use AI to analyze resume content and generate structured results.
+ 
+
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
