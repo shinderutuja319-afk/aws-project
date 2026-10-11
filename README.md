@@ -1,4 +1,4 @@
-# 🚀 Serverless AI Resume Analyzer Using Cloudformation
+# 🚀 Serverless AI Resume Analyzer on AWS Using Cloudformation
 
 An AI-powered, event-driven application built with AWS serverless services. Users can upload a PDF resume through a web interface, the application extracts text and sends it to an Amazon Bedrock foundation model for analysis, and the resulting structured output is stored in Amazon DynamoDB.
 
