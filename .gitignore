@@ -1,0 +1,61 @@
+# =========================
+# AWS SAM build output
+# (contains .aws-sam/build/, build.toml, cache, deps)
+# =========================
+.aws-sam/
+samconfig.toml
+events/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+.aws/
+
+# Packages installed into src/processor with `pip install --target`
+# (the repo should use src/processor/requirements.txt instead)
+src/processor/pypdf/
+src/processor/pypdf-*.dist-info/
+src/processor/typing_extensions*
+src/processor/bin/
+src/processor/pymupdf/
+src/processor/pymupdf-*.dist-info/
+src/processor/fitz/
+
+# =========================
+# Frontend (Frontend/ folder)
+# =========================
+node_modules/
+dist/
+
+# =========================
+# Secrets - never commit
+# =========================
+.env
+.env.*
+*.pem
+*.key
+.aws/
+
+# =========================
+# Editors and OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs and personal files
+# =========================
+*.log
+*.pdf

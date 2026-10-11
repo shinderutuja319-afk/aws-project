@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <header>
+        <h1>AI Resume Analyzer</h1>
+        <p>Upload your resume and get intelligent career insights.</p>
+    </header>
+
+    <main class="card">
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📄</div>
+
+            <h2>Upload Your Resume</h2>
+
+            <p>PDF files only</p>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf,application/pdf"
+                hidden
+            >
+
+            <button id="chooseBtn">Choose Resume</button>
+
+            <p id="fileName"></p>
+        </div>
+
+        <button id="analyzeBtn" class="analyze-btn" disabled>
+            Analyze Resume
+        </button>
+
+        <div id="status" class="status"></div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+```
+
+</body>
+</html>
