@@ -35,35 +35,9 @@ The Serverless AI Resume Analyzer demonstrates how to combine serverless computi
 A user selects a PDF resume in the frontend. The frontend requests a short-lived presigned upload URL from an API endpoint and uploads the PDF directly to a private Amazon S3 bucket. An S3 object-created event invokes a processing Lambda function. That function extracts text from the PDF, requests an analysis from Amazon Bedrock, and saves the result to DynamoDB.
 
 ## 🏗️ Architecture Diagram
+![image alt] (https://github.com/shinderutuja319-afk/aws-project/blob/e423fc67f33fa88d85544d1af03037d844cf6524/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
-```mermaid
-flowchart TD
-    U[User] --> FE[Web Frontend<br/>HTML, CSS, JavaScript]
-    FE -->|Request upload URL| API[Amazon API Gateway]
-    API --> UP[Upload URL Lambda<br/>Python and Boto3]
-    UP -->|Presigned PUT URL| FE
-    FE -->|Upload PDF directly| S3[(Private Amazon S3 Bucket)]
-    S3 -->|Object-created event| PROC[Processor Lambda<br/>Python and pypdf]
-    PROC -->|Extracted resume text| BR[Amazon Bedrock<br/>Foundation Model]
-    BR -->|Structured analysis| PROC
-    PROC -->|Save analysis| DB[(Amazon DynamoDB)]
-    PROC -.-> CW[Amazon CloudWatch Logs]
-    UP -.-> CW
-```
 
-### Architecture components
-
-| Component | Responsibility |
-|---|---|
-| Web frontend | Lets the user choose a PDF and initiate upload/analysis |
-| Amazon API Gateway | Exposes the HTTP endpoint for requesting an upload URL |
-| Upload URL Lambda | Creates a time-limited presigned S3 upload URL |
-| Amazon S3 | Stores uploaded resume PDFs privately and emits object-created events |
-| Processor Lambda | Reads the uploaded PDF, extracts text, calls the AI model, and saves results |
-| Amazon Bedrock | Generates resume insights from extracted text |
-| Amazon DynamoDB | Persists structured analysis results |
-| Amazon CloudWatch | Provides logs for troubleshooting and monitoring |
-| AWS SAM / CloudFormation | Defines and deploys the cloud infrastructure |
 
 ## 📸 Screenshots
 
