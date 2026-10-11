@@ -51,23 +51,27 @@ A user selects a PDF resume in the frontend. The frontend requests a short-lived
 
 > Feature availability depends on the deployed code, IAM permissions, model access, and configuration in your AWS account.
 
-## 🧰 Technology Stack
+## 🧰 Technology used
 
-| Technology | Purpose |
-|---|---|
-| Python 3.12 | Lambda application code |
-| AWS Lambda | Serverless upload URL generation and resume processing |
-| Amazon API Gateway | HTTP API endpoint |
-| Amazon S3 | Resume object storage and event source |
-| Amazon Bedrock | Generative AI analysis |
-| Amazon DynamoDB | Analysis-result storage |
-| AWS SAM | Build and deploy serverless application |
-| AWS CloudFormation | Infrastructure provisioning |
-| Amazon CloudWatch | Logs and diagnostics |
-| Boto3 | Python AWS SDK |
-| `pypdf` | Extract text from PDF files |
-| HTML, CSS, JavaScript | Browser frontend |
-| Git and GitHub | Version control and project hosting |
+- **AWS (Amazon Web Services)**: As the cloud provider to host and manage the serverless infrastructure.
+- **AWS SAM (Serverless Application Model)**: To define, build, and deploy the serverless application.
+- **AWS CloudFormation**: For Infrastructure as Code (IaC), to provision and manage AWS resources.
+- **Amazon S3**: To store uploaded PDF resumes securely and host frontend static files.
+- **Amazon CloudFront**: To distribute frontend content globally with low latency and HTTPS support.
+- **Amazon API Gateway**: To provide HTTP API endpoints for generating secure, presigned resume upload URLs.
+- **AWS Lambda**: To execute serverless Python functions for upload URL generation and resume processing.
+- **Amazon Textract**: To extract text from uploaded resume documents ,but this is available for paid account thats why i used **pypdf** : to read and extract text from pdf.
+- **Amazon Bedrock**: To use generative AI for resume analysis and structured output generation.
+- **Amazon DynamoDB**: To store resume analysis results in a NoSQL database.
+- **AWS IAM (Identity and Access Management)**: To manage permissions and control access between AWS services.
+- **Amazon CloudWatch**: To monitor Lambda execution logs and troubleshoot application errors.
+- **Python 3.12**: As the backend programming language for AWS Lambda functions.
+- **boto3**: The AWS SDK for Python, used to interact with AWS services.
+- **HTML5**: To structure the frontend user interface.
+- **CSS3**: To style the frontend interface.
+- **JavaScript**: To handle resume uploads and communicate with the backend API.
+- **Git**: For version control and tracking code changes.
+- **GitHub**: To host the source code and maintain project documentation.
 
 ## 📂 Project Structure
 
