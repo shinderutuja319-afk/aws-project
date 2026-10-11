@@ -8,9 +8,10 @@ An AI-powered, event-driven application built with AWS serverless services. User
  Reviewing resumes manually can be time-consuming for recruiters, especially when they receive a large number of applications. Identifying relevant skills, experience, and qualifications in each resume requires significant effort.
 
 This project aims to simplify the initial resume-screening process by building a serverless application on AWS that accepts PDF resumes, extracts their text, and is designed to use AI to analyze resume content and generate structured results.
- 
+## 🏗️ Architecture Diagram
+![image alt](https://github.com/shinderutuja319-afk/aws-project/blob/7d0bebc7214d6b74e9e125631f4b01b1da412450/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
-## 📌 Table of Contents
+ ## 📌 Table of Contents
 
 - [Overview](#-overview)
 - [Architecture Diagram](#️-architecture-diagram)
@@ -34,8 +35,6 @@ The Serverless AI Resume Analyzer demonstrates how to combine serverless computi
 
 A user selects a PDF resume in the frontend. The frontend requests a short-lived presigned upload URL from an API endpoint and uploads the PDF directly to a private Amazon S3 bucket. An S3 object-created event invokes a processing Lambda function. That function extracts text from the PDF, requests an analysis from Amazon Bedrock, and saves the result to DynamoDB.
 
-## 🏗️ Architecture Diagram
-![image alt](https://github.com/shinderutuja319-afk/aws-project/blob/7d0bebc7214d6b74e9e125631f4b01b1da412450/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
 ## ✨ Features
 
