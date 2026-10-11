@@ -202,7 +202,7 @@ For local testing, open `Frontend/index.html` with VS Code Live Server or anothe
 - Select a PDF resume.
 - Start the upload/analysis process.
 - Confirm the PDF appears in the S3 `resumes/` prefix.
- ![AWS AI Resume Analzser Architecture](https://github.com/shinderutuja319-afk/aws-project/blob/4545b41f59de0ab2c3a1adf248f3e0e91acd9457/screenshot/Screenshot%20(288).png)
+ ![AWS AI Resume Analzser Architecture](https://github.com/shinderutuja319-afk/aws-project/blob/4545b41f59de0ab2c3a1adf248f3e0e91acd9457/screenshot/Screenshot%20(286).png)
 - Check the processor Lambda's CloudWatch logs.
  ![AWS AI Resume Analyzer Architecture](https://github.com/shinderutuja319-afk/aws-project/blob/4545b41f59de0ab2c3a1adf248f3e0e91acd9457/screenshot/Screenshot%20(288).png)
 - Confirm that the expected analysis record appears in DynamoDB.
