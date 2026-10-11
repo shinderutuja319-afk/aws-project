@@ -37,24 +37,6 @@ A user selects a PDF resume in the frontend. The frontend requests a short-lived
 ## 🏗️ Architecture Diagram
 ![image alt](https://github.com/shinderutuja319-afk/aws-project/blob/7d0bebc7214d6b74e9e125631f4b01b1da412450/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
-
-
-## 📸 Screenshots
-
-Screenshots are stored in the repository's `screenshots/` folder. Keep these filenames and paths, or update the Markdown paths to match your actual filenames.
-
-### 1. Resume Analyzer Frontend
-
-The frontend lets the user choose a PDF resume and start the upload/analysis workflow.
-
-![Resume Analyzer Frontend](screenshots/frontend.png)
-
-### 2. Resume Storage in Amazon S3
-
-The S3 console shows the project's resume storage prefix. Open the `resumes/` folder in the AWS console to view uploaded objects.
-
-![Amazon S3 Resume Storage](screenshots/s3-upload.png)
-
 ## ✨ Features
 
 - PDF resume selection through a browser-based interface.
