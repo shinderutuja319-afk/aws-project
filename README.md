@@ -35,7 +35,7 @@ The Serverless AI Resume Analyzer demonstrates how to combine serverless computi
 A user selects a PDF resume in the frontend. The frontend requests a short-lived presigned upload URL from an API endpoint and uploads the PDF directly to a private Amazon S3 bucket. An S3 object-created event invokes a processing Lambda function. That function extracts text from the PDF, requests an analysis from Amazon Bedrock, and saves the result to DynamoDB.
 
 ## 🏗️ Architecture Diagram
-![Architecture](Serverless AI Resume Analyzer Workflow.png)
+![image alt](https://github.com/shinderutuja319-afk/aws-project/blob/7d0bebc7214d6b74e9e125631f4b01b1da412450/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
 
 
