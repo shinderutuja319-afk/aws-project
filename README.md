@@ -4,6 +4,12 @@ An AI-powered, event-driven application built with AWS serverless services. User
 
 > **Project status:** Built as a hands-on AWS, Python, and Generative AI portfolio project. Verify each feature in your deployed environment before describing it as fully operational.
 
+ # Problem Statement
+ Reviewing resumes manually can be time-consuming for recruiters, especially when they receive a large number of applications. Identifying relevant skills, experience, and qualifications in each resume requires significant effort.
+
+This project aims to simplify the initial resume-screening process by building a serverless application on AWS that accepts PDF resumes, extracts their text, and is designed to use AI to analyze resume content and generate structured results.
+ 
+
 ## 📌 Table of Contents
 
 - [Overview](#-overview)
@@ -29,51 +35,7 @@ The Serverless AI Resume Analyzer demonstrates how to combine serverless computi
 A user selects a PDF resume in the frontend. The frontend requests a short-lived presigned upload URL from an API endpoint and uploads the PDF directly to a private Amazon S3 bucket. An S3 object-created event invokes a processing Lambda function. That function extracts text from the PDF, requests an analysis from Amazon Bedrock, and saves the result to DynamoDB.
 
 ## 🏗️ Architecture Diagram
-
-```mermaid
-flowchart TD
-    U[User] --> FE[Web Frontend<br/>HTML, CSS, JavaScript]
-    FE -->|Request upload URL| API[Amazon API Gateway]
-    API --> UP[Upload URL Lambda<br/>Python and Boto3]
-    UP -->|Presigned PUT URL| FE
-    FE -->|Upload PDF directly| S3[(Private Amazon S3 Bucket)]
-    S3 -->|Object-created event| PROC[Processor Lambda<br/>Python and pypdf]
-    PROC -->|Extracted resume text| BR[Amazon Bedrock<br/>Foundation Model]
-    BR -->|Structured analysis| PROC
-    PROC -->|Save analysis| DB[(Amazon DynamoDB)]
-    PROC -.-> CW[Amazon CloudWatch Logs]
-    UP -.-> CW
-```
-
-### Architecture components
-
-| Component | Responsibility |
-|---|---|
-| Web frontend | Lets the user choose a PDF and initiate upload/analysis |
-| Amazon API Gateway | Exposes the HTTP endpoint for requesting an upload URL |
-| Upload URL Lambda | Creates a time-limited presigned S3 upload URL |
-| Amazon S3 | Stores uploaded resume PDFs privately and emits object-created events |
-| Processor Lambda | Reads the uploaded PDF, extracts text, calls the AI model, and saves results |
-| Amazon Bedrock | Generates resume insights from extracted text |
-| Amazon DynamoDB | Persists structured analysis results |
-| Amazon CloudWatch | Provides logs for troubleshooting and monitoring |
-| AWS SAM / CloudFormation | Defines and deploys the cloud infrastructure |
-
-## 📸 Screenshots
-
-Screenshots are stored in the repository's `screenshots/` folder. Keep these filenames and paths, or update the Markdown paths to match your actual filenames.
-
-### 1. Resume Analyzer Frontend
-
-The frontend lets the user choose a PDF resume and start the upload/analysis workflow.
-
-![Resume Analyzer Frontend](screenshots/frontend.png)
-
-### 2. Resume Storage in Amazon S3
-
-The S3 console shows the project's resume storage prefix. Open the `resumes/` folder in the AWS console to view uploaded objects.
-
-![Amazon S3 Resume Storage](screenshots/s3-upload.png)
+![image alt](https://github.com/shinderutuja319-afk/aws-project/blob/7d0bebc7214d6b74e9e125631f4b01b1da412450/Serverless%20AI%20Resume%20Analyzer%20Workflow.png)
 
 ## ✨ Features
 
