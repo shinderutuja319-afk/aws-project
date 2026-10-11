@@ -193,7 +193,9 @@ Use the API URL returned by your deployment in the frontend configuration. Do no
 ### 7. Open the frontend
 
 For local testing, open `Frontend/index.html` with VS Code Live Server or another local static web server. Make sure the API endpoint in `Frontend/app.js` matches the deployed API URL and that the API's CORS configuration allows the frontend origin.
-![image alt](screenshot/Screenshot(286).png)
+
+![AWS AI Resume Analyzer Architecture](https://github.com/shinderutuja319-afk/aws-project/blob/344f79b2b47bf9014b08eb41e1999a1dcc2d4626/screenshot/Screenshot%20(286).png)
+
 
 ### 8. Test the complete workflow
 
