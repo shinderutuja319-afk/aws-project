@@ -193,6 +193,7 @@ Use the API URL returned by your deployment in the frontend configuration. Do no
 ### 7. Open the frontend
 
 For local testing, open `Frontend/index.html` with VS Code Live Server or another local static web server. Make sure the API endpoint in `Frontend/app.js` matches the deployed API URL and that the API's CORS configuration allows the frontend origin.
+![image alt](screenshot/screenshot(286).png)
 
 ### 8. Test the complete workflow
 
